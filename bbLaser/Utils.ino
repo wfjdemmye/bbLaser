@@ -564,9 +564,9 @@ void fileBufferLoop(void *pvParameters){
   {
     if(millis() - timeDog > 1000){
       timeDog = millis();
-      TIMERG0.wdt_wprotect=TIMG_WDT_WKEY_VALUE;
-      TIMERG0.wdt_feed=1;
-      TIMERG0.wdt_wprotect=0;
+      TIMERG0.wdtwprotect.val=TIMG_WDT_WKEY_VALUE;
+      TIMERG0.wdtfeed.val=1;
+      TIMERG0.wdtwprotect.val=0;
     }
     if(!isStreaming){    
       if(buttonState == 1){
@@ -590,9 +590,9 @@ void ledLoop(void *pvParameters){
     unsigned long currentMillis = millis(); 
     if(currentMillis - timeDog2 > 1000){
       timeDog2 = currentMillis;
-      TIMERG0.wdt_wprotect=TIMG_WDT_WKEY_VALUE;
-      TIMERG0.wdt_feed=1;
-      TIMERG0.wdt_wprotect=0;
+      TIMERG0.wdtwprotect.val=TIMG_WDT_WKEY_VALUE;
+      TIMERG0.wdtfeed.val=1;
+      TIMERG0.wdtwprotect.val=0;
     }
     if(currentMillis - pixelPrevious >= pixelInterval) {        //  Check for expired time
       pixelPrevious = currentMillis;                            //  Run current frame

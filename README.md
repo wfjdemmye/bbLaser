@@ -30,3 +30,12 @@ HAPPY BIRTHDATE ⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐�
 可以点击背面的按钮切换/暂停。  
 ild文件全称为 ILDA 文件，是一种激光投影的标准文件。  
 
+
+# 基本Ardunio-2.3.0编译-【编译修改】
+需要的库：
+![alt text](IMG/image.png)
+修改ElegantOTA库
+![alt text](IMG/image1.png)
+代码修改小许
+ESP32-IDF依赖：
+![alt text](IMG/image2.png)
